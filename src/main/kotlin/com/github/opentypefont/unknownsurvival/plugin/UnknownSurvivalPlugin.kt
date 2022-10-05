@@ -1,8 +1,8 @@
-package com.github.opentypefont.sample.plugin
+package com.github.opentypefont.unknownsurvival.plugin
 
 import org.bukkit.plugin.java.JavaPlugin
 
-class SamplePlugin : JavaPlugin() {
+class UnknownSurvivalPlugin : JavaPlugin() {
     override fun onEnable() {
         logger.info("Plugin enabled.")
     }

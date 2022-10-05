@@ -22,6 +22,7 @@ dependencies {
 }
 
 spigot {
+    name = project.name.split('-').joinToString("") { it.capitalize() }
     description = "Sample plugin"
     load = Load.STARTUP
     apiVersion = "1.19"
