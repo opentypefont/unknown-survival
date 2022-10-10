@@ -39,7 +39,7 @@ class UnknownSurvivalPlugin : JavaPlugin() {
 
             val worldBorder = world.worldBorder
             worldBorder.setCenter(0.0, 0.0)
-            worldBorder.size = 16000.0
+            worldBorder.size = 20000.0
         }
 
         server.pluginManager.registerEvents(EventHandler(), this)

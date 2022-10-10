@@ -78,8 +78,8 @@ class EventHandler : Listener {
     fun onPaperServerListPing(event: PaperServerListPingEvent) {
         val calendar = Calendar.getInstance()
 
-        event.numPlayers = calendar.get(Calendar.MINUTE)
-        event.maxPlayers = calendar.get(Calendar.HOUR_OF_DAY)
+        event.numPlayers = calendar.get(Calendar.HOUR_OF_DAY)
+        event.maxPlayers = calendar.get(Calendar.MINUTE)
         event.playerSample.clear()
     }
 
