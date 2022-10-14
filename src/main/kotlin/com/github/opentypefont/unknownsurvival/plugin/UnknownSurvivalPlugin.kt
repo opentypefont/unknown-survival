@@ -29,6 +29,8 @@ class UnknownSurvivalPlugin : JavaPlugin() {
         server.spawnRadius = 1
         Bukkit.getWorlds().first().apply {
             spawnLocation = getHighestBlockAt(0, 0).location
+            worldBorder.center = spawnLocation
+            worldBorder.size = 30000.0
         }
 
         for (world in Bukkit.getWorlds()) {
@@ -36,10 +38,6 @@ class UnknownSurvivalPlugin : JavaPlugin() {
             world.setGameRule(GameRule.LOG_ADMIN_COMMANDS, false)
             world.setGameRule(GameRule.SEND_COMMAND_FEEDBACK, false)
             world.setGameRule(GameRule.REDUCED_DEBUG_INFO, true)
-
-            val worldBorder = world.worldBorder
-            worldBorder.setCenter(0.0, 0.0)
-            worldBorder.size = 20000.0
         }
 
         server.pluginManager.registerEvents(EventHandler(), this)
