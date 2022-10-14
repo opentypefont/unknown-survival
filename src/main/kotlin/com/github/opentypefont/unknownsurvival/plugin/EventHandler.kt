@@ -124,7 +124,7 @@ class EventHandler : Listener {
     // https://github.com/noonmaru/aimless/blob/424bad6c00f5fa0f08f07326bcb3efaf797bad6c/src/main/kotlin/com/github/noonmaru/aimless/plugin/EventListener.kt#L134
     private fun getSpawnLocation(name: String): Location {
         val seed = name.hashCode()
-        val random = Random(seed.toLong() xor 0x19940423)
+        val random = Random(seed.toLong() xor 0x10101010)
         val world = Bukkit.getWorlds().first()
         val border = world.worldBorder
         val size = border.size / 2.0
